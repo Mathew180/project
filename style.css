@@ -1,13 +1,11 @@
 * {
 	margin: 0;
 	padding: 0;	
-	background : rgb(0, 0, 0)!important;
-	color : rgb(255, 255, 255)!important;
-} 
-
-body {
 	font-family: sans-serif;
-}
+	background-color : rgb(0, 0, 0)!important;
+    color : rgb(255, 255, 255)!important;
+    box-sizing: border-box;
+} 
 
 ul li a {
 	font-weight: 900;
@@ -119,6 +117,74 @@ input::placeholder{
 	font-size: 17px;
 	opacity: 0.7;
 }
+
+.modals {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 700ms ease-in-out;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 1px;
+	z-index: 10;
+	background: white!important;
+	width: 500px;
+	max-width: 80%;
+  }
+  
+  .modals.active {
+	transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modals-header {
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid rgb(255, 255, 255);
+  }
+  
+  .modals-header .title {
+	font-size: 1.25rem;
+	font-weight: bold;
+  }
+  
+  .modals-header .close-button {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 1.25rem;
+	font-weight: bold;
+  }
+  
+  .modals-header .close-button:hover{
+	font-size: 1.9rem;
+	color: lightgreen!important;
+	transform: rotate(360deg); 
+	transition: 300ms ease-in-out;
+  }
+  
+  .modals-body {
+	padding: 10px 15px;
+  }
+  
+  #overlay {
+	position: fixed;
+	opacity: 0;
+	transition: 500ms ease-in-out;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .5);
+	pointer-events: none;
+  }
+  
+  #overlay.active {
+	opacity: 1;
+	pointer-events: all;
+  }
 
 #about-me{
     display: flex;
@@ -258,3 +324,4 @@ input::placeholder{
 
 	}
 }
+
