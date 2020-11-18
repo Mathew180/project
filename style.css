@@ -141,7 +141,7 @@ input::placeholder{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 2px solid rgb(255, 255, 255);
+	border-bottom: 2lgit statuspx solid rgb(255, 255, 255);
   }
   
   .modals-header .title {
